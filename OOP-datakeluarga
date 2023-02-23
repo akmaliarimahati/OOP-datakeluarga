@@ -1,0 +1,84 @@
+using System;
+
+namespace MyApplication
+{
+  class Keluarga
+  {
+    public string Name   
+    { get; set; }  
+    public string Ttl
+    { get; set; }
+    public string Umur
+    { get; set; }
+    public string Nohp
+    { get; set; }
+    public virtual void hobi(){
+        Console.WriteLine("hobi");
+    }
+  }
+  class Ayah : Keluarga {
+      public override void hobi(){
+          Console.WriteLine("hobi: olaraga");
+      }
+  }
+  class Ibu : Keluarga {
+      public override void hobi(){
+          Console.WriteLine("hobi: olaraga");
+      }
+  }
+  class Saya : Keluarga {
+      public override void hobi(){
+          Console.WriteLine("hobi: menonton film");
+      }
+  }
+  class Program
+  {  
+    static void Main(string[] args)
+    {
+        
+     Console.WriteLine("\t\t-------------------");    Console.WriteLine("\t\t   Data keluarga");     Console.WriteLine("\t\t-------------------");
+      Keluarga myAya = new Keluarga();
+      //Biodata Ayah
+      myAya.Name = "Mualim";
+      myAya.Ttl ="31, Agustus";
+      myAya.Umur ="51";
+      myAya.Nohp ="+62 822-4411-3170";
+      Console.WriteLine("nama ayah:" + myAya.Name);
+Console.WriteLine("Ttl:" + myAya.Ttl);
+Console.WriteLine("Umur:"+ myAya.Umur);
+Console.WriteLine("No.hp:"+ myAya.Nohp);
+      Keluarga myAyah = new Ayah();
+      myAyah.hobi();
+      //biodata Ibu
+      Console.WriteLine("===============");
+      Keluarga myIb = new Keluarga();
+      myIb.Name = "Betty";
+      myIb.Ttl ="24, Februari";
+      myIb.Umur ="62";
+      myIb.Nohp ="+62 852-3272-4734";
+      Console.WriteLine("nama ibu:" + myIb.Name);
+Console.WriteLine("Ttl:" + myIb.Ttl);
+Console.WriteLine("Umur:"+myIb.Umur);
+Console.WriteLine("No.hp:"+ myIb.Nohp);
+      Keluarga myIbu = new Ibu();
+      myIbu.hobi();
+      //biodata Saya
+      Console.WriteLine("===============");
+      Keluarga mySay = new Keluarga();
+      mySay.Name = "Akmalia Rima";
+      mySay.Ttl ="9, April";
+      mySay.Umur ="15";
+      mySay.Nohp ="+62 857-5512-5331";
+      Console.WriteLine("namaKu:" + mySay.Name);
+Console.WriteLine("Ttl:" + mySay.Ttl);
+Console.WriteLine("Umur:"+ mySay.Umur);
+Console.WriteLine("No.hp:"+ mySay.Nohp);
+      Keluarga mySaya = new Saya();
+      mySaya.hobi();
+      Console.WriteLine("===============");
+      
+
+
+    }
+  }
+}
